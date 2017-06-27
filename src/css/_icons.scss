@@ -1,0 +1,15 @@
+.icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  vertical-align: baseline;
+
+  &.xs {
+    height: 9px;
+    width: 9px;
+  }
+  &.xl {
+    width: 40px;
+    height: 40px;
+  }
+}
