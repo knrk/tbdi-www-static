@@ -59,6 +59,10 @@ nav .menu {
       letter-spacing: 1.2em;
       font-size: 1em;
 
+      &:last-child {
+        margin-left: 20px;
+      }
+
       a {
         height: 100%;
         letter-spacing: 1px;
@@ -67,6 +71,10 @@ nav .menu {
         border-top: 3px solid $minor-border-color;
         color: $major-text-color;
         text-decoration: none;
+
+        i {
+          margin-left: 3px;
+        }
 
         &[rel='external'] {
           border: 2px solid $border-color;
@@ -95,6 +103,10 @@ nav .menu {
     li {
       line-height: 40px;
       text-transform: initial;
+
+      &:last-child {
+        margin-left: 0;
+      }
     }
 
     a {
@@ -210,6 +222,9 @@ main {
     &:nth-child(2) {
       margin-top: 50px;
     }
+    &:last-child {
+      margin-bottom: 30px;
+    }
 
     hr {
       box-sizing: border-box;
@@ -232,6 +247,12 @@ main {
 
     p {
       line-height: 1.8em;
+      text-align: left;
+
+      abbr {
+        text-align: center;
+        display: block;
+      }
     }
 
     aside {
@@ -341,4 +362,86 @@ footer {
       text-align: right;
       padding-right: 20px;
     }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+
+  form {
+    flex: 0 1 70%;
+    padding: 20px;
+
+    .row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      textarea {
+        width: 100%;
+        height: 165px;
+        margin: 20px 10px;
+      }
+
+      button {
+        flex: 0 1 auto;
+        margin: 0 10px;
+      }
+
+      &:last-child {
+       justify-content: space-between; 
+      }
+
+      .ajax-loader {
+        position: absolute;
+      }
+      .wpcf7-response-output {
+        margin: 0;
+      }
+      .wpcf7-response-output + p {
+        margin: 0;
+
+        span {
+          display: none;
+        }
+      }
+    }
+    .row input {
+      margin: 0 10px;
+      flex: 0 1 50%;
+
+      &[type=submit] {
+        flex: 0 1 auto;
+      }
+    }
+  }
+
+  address {
+    flex: 0 1 30%;
+    text-align: left;
+    font-size: 13px;
+    font-style: normal;
+    margin-top: 20px;
+
+    h3, h4 {
+      font-style: normal;
+    }
+
+    h3:first-child {
+      margin-top: 0;
+    }
+
+    h4 {
+      margin: 10px 0 2px 0;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin: 0;
+    }
+  }
 }

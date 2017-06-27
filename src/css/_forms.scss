@@ -1,0 +1,23 @@
+form {
+  * {
+    outline: 0;
+  }
+
+  input[type=text],
+  input[type=email],
+  textarea {
+    border: 2px solid $border-color;
+    font-size: 17px;
+    padding: 5px 10px;
+  }
+
+  button,
+  input[type=submit] {
+    line-height: 37px;
+    width: 200px;
+    background-color: $button-bg;
+    border: 0;
+    color: $minor-text-color;
+
+  }
+}
